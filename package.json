@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/JPodz/angular-ui",
   "dependencies": {
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "grunt-angular-templates": "^0.5.7",
+    "grunt-contrib-requirejs": "^0.4.4"
   }
 }
