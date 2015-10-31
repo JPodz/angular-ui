@@ -10,7 +10,8 @@ module.exports = function (grunt) {
                     name: 'main',
                     baseUrl: 'src/',
                     mainConfigFile: 'src/rconfig.js',
-                    out: 'dist/main.js'
+                    out: 'dist/main.js',
+                    generateSourceMaps: true
                 }
             }
         },
@@ -38,17 +39,34 @@ module.exports = function (grunt) {
                 src: path.join('**/*.html'),
                 dest: path.join('src/views.js')
             }
+        },
+
+        // Compiles all LESS files for the application
+        less: {
+            dist: {
+                options: {
+                    paths: [],
+                    sourceMap: true
+                },
+                files: {
+                    'dist/main.css': 'src/main.less'
+                }
+            }
         }
     });
 
     // Load tasks
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-angular-templates');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     // The 'script' task compiles all JavaScript
     grunt.registerTask('script', ['ngtemplates', 'requirejs']);
 
+    // The `style` task compiles all CSS
+    grunt.registerTask('style', ['less']);
+
     // The 'default' task builds the entire structure
-    grunt.registerTask('default', ['script']);
+    grunt.registerTask('default', ['script', 'style']);
 
 };
