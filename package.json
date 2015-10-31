@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JPodz/angular-ui/issues"
   },
-  "homepage": "https://github.com/JPodz/angular-ui"
+  "homepage": "https://github.com/JPodz/angular-ui",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  }
 }
