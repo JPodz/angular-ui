@@ -1,0 +1,9 @@
+# 3rd party dependency libraries
+bower_components
+node_modules
+
+# Log files
+*.log
+
+# OS specific files
+.DS_Store
