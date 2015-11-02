@@ -1,4 +1,18 @@
-body {
-  color: red;
+.jp-hamburger-menu {
+  box-sizing: border-box;
+  min-width: 50px;
+}
+.jp-hamburger-menu__button {
+  display: block;
+  width: 100%;
+  padding: 0 5px;
+  background-color: transparent;
+  border-color: transparent;
+}
+.jp-hamburger-menu__line {
+  display: block;
+  background-color: #000;
+  height: 2px;
+  margin: 10px 0;
 }
 /*# sourceMappingURL=dist/main.css.map */

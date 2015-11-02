@@ -5,5 +5,8 @@ node_modules
 # Log files
 *.log
 
+# Doc files
+docs
+
 # OS specific files
 .DS_Store

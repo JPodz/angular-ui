@@ -1,5 +1,5 @@
 {
-  "name": "angular-ui",
+  "name": "jp-angular-ui",
   "version": "1.0.0",
   "homepage": "https://github.com/JPodz/angular-ui",
   "description": "Common UI components built in AngularJS",
@@ -16,6 +16,13 @@
   ],
   "dependencies": {
     "angular": "~1.4.7",
-    "requirejs": "~2.1.20"
+    "angular-sanitize": "~1.4.7",
+    "requirejs": "~2.1.20",
+    "videogular": "~0.6.2",
+    "videogular-buffering": "~0.6.2",
+    "videogular-controls": "~0.6.2",
+    "videogular-overlay-play": "~0.6.2",
+    "videogular-poster": "~0.6.2",
+    "videogular-themes-default": "~0.6.2"
   }
 }

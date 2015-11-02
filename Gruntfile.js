@@ -7,11 +7,12 @@ module.exports = function (grunt) {
         requirejs: {
             dist: {
                 options: {
-                    name: 'main',
+                    name: 'jp-angular-ui',
                     baseUrl: 'src/',
                     mainConfigFile: 'src/rconfig.js',
                     out: 'dist/main.js',
-                    generateSourceMaps: true
+                    generateSourceMaps: true,
+                    findNestedDependencies: true
                 }
             }
         },
@@ -52,6 +53,14 @@ module.exports = function (grunt) {
                     'dist/main.css': 'src/main.less'
                 }
             }
+        },
+
+        // Compiles documentation
+        ngdocs: {
+            options: {
+                dest: 'docs'
+            },
+            all: ['src/**/*.js']
         }
     });
 
@@ -59,14 +68,18 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-angular-templates');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-ngdocs');
 
     // The 'script' task compiles all JavaScript
     grunt.registerTask('script', ['ngtemplates', 'requirejs']);
 
-    // The `style` task compiles all CSS
+    // The 'style' task compiles all CSS
     grunt.registerTask('style', ['less']);
 
+    // The 'doc' task compules the documentation
+    grunt.registerTask('doc', ['ngdocs']);
+
     // The 'default' task builds the entire structure
-    grunt.registerTask('default', ['script', 'style']);
+    grunt.registerTask('default', ['script', 'style', 'doc']);
 
 };
