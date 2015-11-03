@@ -1,0 +1,39 @@
+.jp-popover-menu {
+    
+    &-body {
+
+        position: absolute;
+
+        // Visibility
+        // &__visible {
+        //     background-color: blue;
+        // }
+        // &__hidden {
+        //     background-color: red;
+        // }
+
+        // // Position
+        // &__position {
+        //     &-center-top {
+
+        //         .translate(0, -50px);
+        //     }
+        // }
+    }
+}
+
+.dropdown .dropdown-menu {
+    display: block; 
+    opacity: 0;
+    bottom: 0% !important;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    bottom: 100% !important;
+}

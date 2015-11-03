@@ -5,6 +5,11 @@ define([],{init:function($templateCache){  'use strict';
   );
 
 
+  $templateCache.put('ui/popover-menu/popover-menu.html',
+    "<div class=jp-popover-menu><div class=\"btn-group dropup\" uib-dropdown><div jp-popover-menu-transclude=triggerElement uib-dropdown-toggle></div><div class=uib-dropdown-menu ng-transclude></div></div></div>"
+  );
+
+
   $templateCache.put('ui/video-player/video-player.html',
     "<videogular><vg-video vg-src=config.sources vg-native-controls=true></vg-video></videogular>"
   );

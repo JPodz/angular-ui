@@ -16,7 +16,9 @@
   ],
   "dependencies": {
     "angular": "~1.4.7",
+    "angular-bootstrap": "~0.14.3",
     "angular-sanitize": "~1.4.7",
+    "bootstrap": "~3.3.5",
     "requirejs": "~2.1.20",
     "videogular": "~0.6.2",
     "videogular-buffering": "~0.6.2",
@@ -24,5 +26,9 @@
     "videogular-overlay-play": "~0.6.2",
     "videogular-poster": "~0.6.2",
     "videogular-themes-default": "~0.6.2"
+  },
+  "resolutions": {
+    "angular": "~1.4.7",
+    "angular-sanitize": "~1.4.7"
   }
 }
