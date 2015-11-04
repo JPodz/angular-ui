@@ -1,24 +1,10 @@
 .jp-popover-menu {
-    
-    &-body {
 
-        position: absolute;
-
-        // Visibility
-        // &__visible {
-        //     background-color: blue;
-        // }
-        // &__hidden {
-        //     background-color: red;
-        // }
-
-        // // Position
-        // &__position {
-        //     &-center-top {
-
-        //         .translate(0, -50px);
-        //     }
-        // }
+    // Trigger element needs to be higher up on the
+    // index chain so the menu doesn't cover it.
+    &__trigger {
+        position: relative;
+        z-index: 2000;
     }
 }
 
@@ -32,7 +18,7 @@
     -o-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
 }
-.dropdown:hover .dropdown-menu {
+.dropdown.open .dropdown-menu {
     display: block;
     opacity: 1;
     bottom: 100% !important;

@@ -6849,8 +6849,9 @@ button.close {
   height: 2px;
   margin: 10px 0;
 }
-.jp-popover-menu-body {
-  position: absolute;
+.jp-popover-menu__trigger {
+  position: relative;
+  z-index: 2000;
 }
 .dropdown .dropdown-menu {
   display: block;
@@ -6862,7 +6863,7 @@ button.close {
   -o-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
-.dropdown:hover .dropdown-menu {
+.dropdown.open .dropdown-menu {
   display: block;
   opacity: 1;
   bottom: 100% !important;

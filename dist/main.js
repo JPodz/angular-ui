@@ -6,7 +6,7 @@ define('views',[],{init:function($templateCache){  'use strict';
 
 
   $templateCache.put('ui/popover-menu/popover-menu.html',
-    "<div class=jp-popover-menu><div class=\"btn-group dropup\" uib-dropdown><div jp-popover-menu-transclude=triggerElement uib-dropdown-toggle></div><div class=uib-dropdown-menu ng-transclude></div></div></div>"
+    "<div class=jp-popover-menu><div class=\"btn-group dropup\" uib-dropdown><div class=jp-popover-menu__trigger><div jp-popover-menu-transclude=triggerElement uib-dropdown-toggle></div></div><div class=\"jp-popover-menu__content uib-dropdown-menu\" ng-transclude></div></div></div>"
   );
 
 
